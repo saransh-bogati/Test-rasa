@@ -1,0 +1,52 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - request_search
+  - bot_challenge
+  - search_terms
+
+responses:
+  utter_greet:
+  - text: "Hello! What can I do for you today? "
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_ask_search_term:
+  - text: "What would you like to search for?"
+
+  utter_submit: 
+  - text: "Thank you! The search will begin right away"
+
+  utter_slot_values:
+  - text: "Searching for term: {search_term}"
+
+forms:
+  search_form:
+    search_term:
+      - type: from_text
+
+slots:
+  search_term:
+    type: text
+    influence_conversation: false
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+actions:
+  - action_receive_search_term
