@@ -13,9 +13,7 @@ jobs:
           python-version: 3.9
           
       - name: Install pipenv
-        run: |
-          python -m ensurepip --upgrade
-          python -m pip install --upgrade pipenv wheel
+        uses: dschep/install-pipenv-action@v1
       
       - name: cache-pipenv
         uses: actions/cache@v1
