@@ -156,9 +156,9 @@ requests-toolbelt
 requests-unixsocket
 rfc3986
 rocketchat-API
-rsa
-ruamel.yaml
-ruamel.yaml.clib
+rsa==4.7.2
+ruamel.yaml==0.16.13
+ruamel.yaml.clib==0.2.6
 s3transfer
 sacremoses
 sanic
