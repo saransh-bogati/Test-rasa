@@ -154,7 +154,7 @@ requests
 requests-oauthlib
 requests-toolbelt
 requests-unixsocket
-rfc3986
+rfc3986==1.5.0
 rocketchat-API==1.16.0
 rsa==4.7.2
 ruamel.yaml==0.16.13
