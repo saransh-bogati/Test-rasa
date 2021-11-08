@@ -25,11 +25,18 @@ jobs:
       
       
       - name: Cross-validate NLU model
-        id: cvnlu 
+        id: cvnlu
+        uses: VaultVulp/action-pipenv@v2.0.1
+        with:
+          command: run rasa test nlu -f 3 --croess-validation 
+           
+      - name: Format validation result
         run: |
-          pipenv run rasa --version
-          pipenv run rasa test nlu -f 3 --croess-validation 
-          python .github/worklows/format_results.py
+          command:- python .github/worklows/format_results.py
+#         run: |
+#           pipenv run rasa --version
+#           pipenv run rasa test nlu -f 3 --croess-validation 
+#           python .github/worklows/format_results.py
       
       - name: post cross-val results to PR
         if: steps.cvnlu.outcome == 'success'
