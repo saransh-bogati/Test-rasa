@@ -27,7 +27,7 @@ click
 cloudpickle
 colorama
 colorclass
-coloredlogs
+coloredlogs==15.0.1
 colorhash
 cryptography
 cycler
@@ -146,7 +146,7 @@ pyxdg
 PyYAML
 questionary
 rasa
-rasa-sdk
+rasa-sdk==2.8.2
 redis==3.5.3
 regex==2021.7.6
 reportlab==3.5.34
