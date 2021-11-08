@@ -18,7 +18,6 @@ blinker==1.4
 blis==0.7.4
 boto3==1.18.48
 botocore==1.21.48
-Brlapi==0.7.0
 cachetools==4.2.2
 catalogue==2.0.6
 certifi==2021.5.30
