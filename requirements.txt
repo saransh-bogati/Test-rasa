@@ -29,7 +29,6 @@ colorama
 colorclass
 coloredlogs
 colorhash
-command-not-found
 cryptography
 cupshelpers
 cycler
