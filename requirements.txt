@@ -30,7 +30,6 @@ colorclass
 coloredlogs
 colorhash
 cryptography
-cupshelpers
 cycler
 cymem
 dbus-python
