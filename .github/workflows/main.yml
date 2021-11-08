@@ -31,8 +31,8 @@ jobs:
       - name: Cross-validate NLU model
         id: cvnlu
         run: |
-          rasa --version
-          rasa test nlu -f 3 --croess-validation 
+          pipenv run rasa --version
+          pipenv run rasa test nlu -f 3 --croess-validation 
           python .github/worklows/format_results.py
       
       - name: post cross-val results to PR
@@ -44,9 +44,9 @@ jobs:
       
       - name: Train model
         run: |
-          rasa train --quiet
+          pipenv run rasa train --quiet
           
       - name: Test end to end stories
         run: |
-         rasa test core --fail-on-prediction-errors
+         pipenv run rasa test core --fail-on-prediction-errors
           
