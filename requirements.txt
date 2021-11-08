@@ -5,7 +5,7 @@ aiohttp==3.7.4
 aiormq==3.3.1
 appdirs==1.4.3
 APScheduler==3.7.0
-apturl==0.5.2
+apturl
 astunparse==1.6.3
 async-generator==1.10
 async-timeout==3.0.1
@@ -220,7 +220,7 @@ ujson==4.2.0
 ulauncher==5.14.0
 unattended-upgrades==0.1
 uritemplate==0.6
-urllib3==1.26.7
+urllib3
 usb-creator==0.3.7
 virtualenv==20.8.1
 virtualenv-clone==0.5.7
