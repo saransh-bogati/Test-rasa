@@ -145,8 +145,8 @@ pytz
 pyxdg
 PyYAML
 questionary
-rasa==2.8.7
-rasa-sdk==2.8.2
+rasa
+rasa-sdk
 redis==3.5.3
 regex==2021.7.6
 reportlab==3.5.34
