@@ -13,7 +13,9 @@ jobs:
           python-version: 3.9
           
       - name: Install pipenv
-        uses: dschep/install-pipenv-action@v1
+        uses: VaultVulp/action-pipenv@v2.0.1
+        with:
+          command: install -d
       
       - name: cache-pipenv
         uses: actions/cache@v1
@@ -21,13 +23,9 @@ jobs:
           path: ~/.local/share/virtualenvs
           key: ${{ runner.os }}-pipenv-${{ hashFiles('**/Pipfile.lock') }}
       
-      - name: Install dependencies
-        if: steps.cache-pipenv.outputs.cache-hit != 'true'
-        run: |
-          pipenv install --deploy --dev
       
       - name: Cross-validate NLU model
-        id: cvnlu
+        id: cvnlu 
         run: |
           pipenv run rasa --version
           pipenv run rasa test nlu -f 3 --croess-validation 
