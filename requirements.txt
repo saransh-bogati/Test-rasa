@@ -183,7 +183,6 @@ spacy-legacy
 spacy-transformers
 SQLAlchemy
 srsly
-systemd-python
 tabulate
 tensorboard
 tensorboard-data-server
