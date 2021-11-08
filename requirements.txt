@@ -75,7 +75,6 @@ kafka-python
 Keras-Preprocessing
 keyring
 kiwisolver
-language-selector
 launchpadlib
 lazr.restfulclient
 lazr.uri
