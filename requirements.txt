@@ -167,7 +167,6 @@ sanic-jwt
 Sanic-Plugins-Framework
 scikit-learn
 scipy
-screen-resolution-extra
 SecretStorage
 sentry-sdk
 setproctitle
