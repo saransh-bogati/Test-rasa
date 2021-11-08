@@ -41,7 +41,6 @@ distro-info
 dm-tree
 dnspython
 docopt
-duplicity
 entrypoints
 evdev
 fasteners
