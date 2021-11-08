@@ -11,7 +11,7 @@ intents:
 
 responses:
   utter_greet:
-  - text: "Hello! What can I do for you today? "
+  - text: "Hello! k xa?? "
 
   utter_did_that_help:
   - text: "Did that help you?"
