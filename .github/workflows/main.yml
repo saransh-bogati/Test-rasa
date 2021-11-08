@@ -13,22 +13,12 @@ jobs:
           python-version: 3.9
           
       - name: Install pipenv
-        uses: VaultVulp/action-pipenv@v2.0.1
-        with:
-          command: install -d
-      
-      - name: cache-pipenv
-        uses: actions/cache@v1
-        with:
-          path: ~/.local/share/virtualenvs
-          key: ${{ runner.os }}-pipenv-${{ hashFiles('**/Pipfile.lock') }}
-      
-      
-      - name: Cross-validate NLU model
-        id: cvnlu
-        uses: VaultVulp/action-pipenv@v2.0.1
-        with:
-          command: run rasa test nlu -f 3 --croess-validation 
+        run: |
+          pip install pipenv
+          pipenv install --deploy --dev
+      - run: rasa test nlu -f 3 --croess-validation 
+      - run:  pipenv run rasa train --quiet
+      - run: pipenv run rasa test core --fail-on-prediction-errors
            
       - name: Format validation result
         run: |
@@ -45,11 +35,5 @@ jobs:
         with:
           msg: results.md
       
-      - name: Train model
-        run: |
-          pipenv run rasa train --quiet
-          
-      - name: Test end to end stories
-        run: |
-         pipenv run rasa test core --fail-on-prediction-errors
+         
           
